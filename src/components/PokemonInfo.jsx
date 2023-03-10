@@ -37,11 +37,9 @@ const PokemonInfo = ({ id, isShowInfo, setIsShowInfo }) => {
   };
 
   useEffect(() => {
-    return () => {
-      fetchPokemonById();
-      fetchPokemonGif();
-      fetchSpeciesByID();
-    };
+    fetchPokemonById();
+    fetchPokemonGif();
+    fetchSpeciesByID();
   }, []);
 
   return (
@@ -54,7 +52,7 @@ const PokemonInfo = ({ id, isShowInfo, setIsShowInfo }) => {
             duration: 0.04,
             // delay: 0.5,
             // ease: [0, 0.71, 0.2, 1.01],
-            ease: "anticipate"
+            ease: "anticipate",
           }}
           className={`relative w-auto my-8 mx-4 max-w-5xl ease-linear transition-all duration-300 ${
             isShowInfo ? "opacity-100" : "opacity-0"
