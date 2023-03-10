@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* weight and height */
+.circle-info {
+  @apply w-14 h-14 text-gray-800 absolute -top-5 bg-white rounded-full flex justify-center items-center text-center p-1
+}
+
+/* pokemon info */
+.title {
+ @apply text-xl font-semibold mb-2 text-center sm:text-2xl
+}
