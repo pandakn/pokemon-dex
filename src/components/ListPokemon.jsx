@@ -29,7 +29,6 @@ const ListPokemon = () => {
   const fetchPokemonInfo = async () => {
     let res = await listPokemonInfo();
     if (res) {
-      // console.log(res)
       setPokemonInfo(res);
       setTimeout(() => {
         setIsLoading(false);
