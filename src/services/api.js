@@ -42,20 +42,6 @@ const getPokemonByID = async (id) => {
   return res;
 };
 
-const getPokemonGif = async () => {
-  let arr = [];
-  const urlGif =
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated";
-
-  for (let i = 1; i <= limit; i++) {
-    let gif = `${urlGif}/${i}.gif`;
-
-    arr.push(gif);
-  }
-
-  return arr;
-};
-
 const getSpeciesByID = async (id) => {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
     .then((response) => response.json())
@@ -68,4 +54,4 @@ const getSpeciesByID = async (id) => {
   return res;
 };
 
-export { listPokemonInfo, getPokemonByID, getPokemonGif, getSpeciesByID };
+export { listPokemonInfo, getPokemonByID, getSpeciesByID };
